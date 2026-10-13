@@ -1,0 +1,289 @@
+@import "tailwindcss";
+@import "@fontsource-variable/plus-jakarta-sans";
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/sora";
+@import "@fontsource/dm-serif-display/400.css";
+@import "@fontsource/dm-serif-display/400-italic.css";
+
+@theme {
+  --font-display: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  /* Wide geometric face for the page headlines, set in sentence case */
+  --font-headline: "Sora Variable", ui-sans-serif, system-ui, sans-serif;
+  /* Display serif for headings, scripture and numerals. It has one weight, so use it with font-normal. */
+  --font-serif: "DM Serif Display", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /*
+   * THEME: indigo and sunset. Dark sections are a deep violet-indigo and the
+   * accent runs from vermilion to magenta, the colours of the emblem's flame.
+   * The main buttons carry both ends as a gradient (the bg-sunset utility).
+   * The token names are historical: "navy" is the dark base colour, "flame"
+   * the accent and "on-flame" the text colour used on top of an accent
+   * background. flame-400 is the vermilion fill, flame-500 and flame-700 the
+   * magenta shades that stay readable as text on the light backgrounds, and
+   * flame-200 and flame-300 the peach tints for text on dark backgrounds.
+   *
+   * Earlier themes, should one be wanted again (on-flame was #ffffff except where given):
+   *   burgundy + gold   navy-950 #16050b  navy-900 #260a14  navy-800 #37101e  navy-700 #4d182b  navy-600 #6b2540
+   *                     flame-200 #f9e8c4  flame-300 #efcb80  flame-400 #dba848  flame-500 #8c5a10  flame-700 #6c430a
+   *                     on-flame #1c070e  ivory #faf5f0  sand #f1e8e0  line #e0d2c6  ink #1c0d12  slate #5e4f53
+   *   evergreen + gold  navy-950 #04120d  navy-900 #0a2019  navy-800 #112e24  navy-700 #1a4234  navy-600 #275a48
+   *                     flame-200 #f7e6ba  flame-300 #ebc674  flame-400 #d8a43c  flame-500 #8a5a0b  flame-700 #6b4406
+   *                     on-flame #07160f  ivory #f8f4ea  sand #eee7d6  line #dad0b9  ink #0c1a14  slate #4d5a53
+   *   graphite + azure  navy-950 #0a0b0e  navy-900 #12141a  navy-800 #1b1e27  navy-700 #272b37  navy-600 #3a4050
+   *                     flame-200 #d6ecff  flame-300 #7cc4ff  flame-400 #1668e3  flame-500 #0f54c2  flame-700 #0b3f94
+   *                     ivory #f8f5ef  sand #efe9dd  line #ddd5c5  ink #0b1626  slate #505a69
+   *   royal blue        navy-950 #040a26  navy-900 #081a4d  navy-800 #0d2670  navy-700 #14348f  navy-600 #1e47b8
+   *   navy + red        navy-950 #050d1b  navy-900 #08162b  navy-800 #0d2140  navy-700 #153058  navy-600 #1f4273
+   *                     flame-200 #ffd9d0  flame-300 #ff9d87  flame-400 #d93a24  flame-500 #c22f1b  flame-700 #96210f
+   */
+  --color-navy-950: #0b0620;
+  --color-navy-900: #140b33;
+  --color-navy-800: #1e1250;
+  --color-navy-700: #2c1b73;
+  --color-navy-600: #40299c;
+  --color-flame-200: #ffd9c7;
+  --color-flame-300: #ff9a6b;
+  --color-flame-400: #e0351a;
+  --color-flame-500: #c8246a;
+  --color-flame-700: #9c1552;
+  --color-on-flame: #ffffff;
+  --color-ivory: #faf8ff;
+  --color-sand: #f0ecfb;
+  --color-line: #dcd5f0;
+  --color-ink: #150d2e;
+  --color-slate: #55507a;
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: var(--color-flame-400);
+    color: var(--color-on-flame);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-flame-400);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 82.5rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 40rem) {
+    padding-inline: 2rem;
+  }
+  @media (min-width: 64rem) {
+    padding-inline: 3rem;
+  }
+}
+
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (min-width: 48rem) {
+    padding-block: 7rem;
+  }
+  @media (min-width: 80rem) {
+    padding-block: 9rem;
+  }
+}
+
+/* The accent gradient for the main call-to-action buttons */
+@utility bg-sunset {
+  background-image: linear-gradient(105deg, var(--color-flame-400), var(--color-flame-500));
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+/* Home hero: a row of flags drifting sideways. The row holds its content twice, so half its width is one full loop. */
+@keyframes marquee-x {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility marquee {
+  animation: marquee-x var(--marquee-duration, 80s) linear infinite;
+}
+
+/* Logo wordmark: the name rises into place, then a flame-coloured shine sweeps across it now and then. */
+@keyframes logo-rise {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+@keyframes logo-shine {
+  0%,
+  60% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes logo-spread {
+  from {
+    opacity: 0;
+    letter-spacing: 0.05em;
+  }
+}
+
+@utility logo-word {
+  background-image: linear-gradient(110deg, var(--logo-ink) 42%, var(--color-flame-300) 50%, var(--logo-ink) 58%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  background-clip: text;
+  color: transparent;
+  animation:
+    logo-rise 0.9s var(--ease-premium) 0.2s both,
+    logo-shine 5s ease-in-out 1.4s infinite;
+}
+
+@utility logo-sub {
+  animation: logo-spread 1.1s var(--ease-premium) 0.7s both;
+}
+
+/*
+ * Hero headline letter effects. Each letter is a <b> carrying --i (its index in
+ * the word), --c (the word's centre index) and --w (the word's turn).
+ * Shatter: the white words fracture outward one after another and snap back.
+ * Smoke: the accent word then curls upward like smoke from a flame and re-forms.
+ * The whole sequence plays once shortly after load, then again every 20 seconds;
+ * all the movement sits in the first tenth of each 20-second cycle.
+ */
+.fx-shatter,
+.fx-smoke {
+  display: inline-flex;
+  white-space: nowrap;
+}
+.fx-shatter {
+  perspective: 420px;
+}
+.fx-shatter b,
+.fx-smoke b {
+  display: inline-block;
+  font-weight: inherit;
+  will-change: transform, opacity;
+}
+.fx-shatter b {
+  transform-origin: 50% 60%;
+  animation: fx-shatter 20s cubic-bezier(0.22, 1.15, 0.36, 1) infinite;
+  animation-delay: calc(1.6s + var(--w) * 0.9s + var(--i) * 0.06s);
+}
+.fx-smoke b {
+  animation: fx-smoke 20s ease-in-out infinite;
+  animation-delay: calc(1.6s + var(--w) * 0.9s + var(--i) * 0.16s);
+}
+@keyframes fx-shatter {
+  0% {
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+    color: inherit;
+    text-shadow: none;
+  }
+  2% {
+    transform: translate(calc((var(--i) - var(--c)) * 0.2em), calc(-0.28em - var(--i) * 0.03em)) rotate(calc((var(--i) - var(--c)) * 12deg)) scale(0.9);
+    opacity: 0.6;
+    filter: blur(0.4px);
+    color: var(--color-flame-200);
+    text-shadow:
+      0.03em 0 0 color-mix(in srgb, var(--color-flame-300) 70%, transparent),
+      -0.03em 0 0 color-mix(in srgb, var(--color-flame-400) 70%, transparent);
+  }
+  4% {
+    transform: translate(calc((var(--i) - var(--c)) * 0.32em), calc(0.1em + var(--i) * 0.02em)) rotate(calc((var(--i) - var(--c)) * -8deg)) scale(1.04);
+    opacity: 0.25;
+    filter: blur(1.2px);
+  }
+  6% {
+    transform: translate(0, -0.08em) scale(1.06);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  6.2% {
+    transform: scale(0.8);
+    opacity: 0;
+    filter: blur(0);
+    color: var(--color-flame-200);
+  }
+  9.5%,
+  100% {
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+    color: inherit;
+    text-shadow: none;
+  }
+}
+@keyframes fx-smoke {
+  0% {
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+    color: var(--color-flame-300);
+  }
+  3% {
+    color: var(--color-flame-200);
+  }
+  6.5% {
+    transform: translate(0.08em, -0.32em) rotate(14deg) scale(1.4);
+    opacity: 0;
+    filter: blur(7px);
+  }
+  6.8% {
+    transform: translateY(0.14em) scale(0.85);
+    opacity: 0;
+    filter: blur(4px);
+  }
+  10.5%,
+  100% {
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+    color: var(--color-flame-300);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
