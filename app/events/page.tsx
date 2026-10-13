@@ -22,7 +22,7 @@ export default async function EventsPage() {
           <EventsBrowser events={events} />
         </div>
       </section>
-      <CTASection title="Planning to come along?" lead="Tell us which event you are interested in and we will save you a seat and send you the details." primary={{ label: "Register Your Interest", href: "/contact" }} secondary={{ label: "Contact Us", href: "/contact" }} />
+      <CTASection title="Planning to come along?" lead="Tell us which event you are interested in and we will save you a seat and send you the details." primary={{ label: "Register Your Interest", href: "/contact" }} secondary={{ label: "View the Gallery", href: "/gallery" }} />
     </>
   );
 }

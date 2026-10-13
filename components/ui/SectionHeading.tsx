@@ -21,7 +21,7 @@ export function SectionHeading({ eyebrow, title, lead, align = "left", light, as
           {eyebrow}
         </p>
       )}
-      <Tag className={cn("text-[2rem] leading-[1.08] sm:text-5xl lg:text-[3.5rem]", light ? "text-white" : "text-navy-900")}>{title}</Tag>
+      <Tag className={cn("font-serif text-[2rem] font-normal leading-[1.08] tracking-[-0.01em] sm:text-5xl lg:text-[3.5rem]", light ? "text-white" : "text-navy-900")}>{title}</Tag>
       {lead && <p className={cn("mt-6 text-base leading-relaxed sm:text-lg", light ? "text-white/75" : "text-slate")}>{lead}</p>}
     </Reveal>
   );

@@ -23,7 +23,7 @@ export function CTASection({
               <span aria-hidden className="h-px w-10 bg-current" />
               Get connected
             </p>
-            <h2 className="text-3xl leading-[1.1] sm:text-4xl xl:text-5xl">{title}</h2>
+            <h2 className="font-serif text-4xl font-normal leading-[1.08] tracking-[-0.01em] sm:text-5xl">{title}</h2>
             <p className="mt-5 max-w-md text-base leading-relaxed text-white/75 sm:text-lg">{lead}</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button href={primary.href} fullOnMobile>

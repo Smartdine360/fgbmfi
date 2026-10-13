@@ -106,7 +106,7 @@ export function Footer() {
             </li>
             <li>
               <Link href="/terms" className="inline-flex min-h-10 items-center hover:text-white">
-                Terms
+                Terms &amp; Conditions
               </Link>
             </li>
           </ul>

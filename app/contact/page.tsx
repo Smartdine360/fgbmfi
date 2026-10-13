@@ -49,13 +49,13 @@ export default function ContactPage() {
               <ul className="mt-10 divide-y divide-white/10 border-y border-white/10">
                 {ways.map(({ icon: Icon, label, lines, href, external }) => (
                   <li key={label}>
-                    <a href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex items-start gap-5 py-6">
+                    <a href={href} {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group flex items-start gap-4 py-6 sm:gap-5">
                       <span aria-hidden className="grid size-11 shrink-0 place-items-center rounded-full border border-white/15 text-flame-300 transition-colors duration-500 group-hover:border-transparent group-hover:bg-flame-400 group-hover:text-on-flame">
                         <Icon className="size-[1.125rem]" />
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="eyebrow block text-white/50">{label}</span>
-                        <span className="mt-2 block break-words text-lg leading-snug">
+                        <span className="mt-2 block break-words text-[0.95rem] leading-snug sm:text-lg">
                           {lines.map((line) => (
                             <span key={line} className="block">
                               {line}
@@ -63,7 +63,7 @@ export default function ContactPage() {
                           ))}
                         </span>
                       </span>
-                      <ArrowUpRight aria-hidden className="mt-1 size-5 shrink-0 text-white/40 transition-[color,transform] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-flame-300" />
+                      <ArrowUpRight aria-hidden className="mt-1 hidden size-5 shrink-0 text-white/40 sm:block transition-[color,transform] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-flame-300" />
                     </a>
                   </li>
                 ))}

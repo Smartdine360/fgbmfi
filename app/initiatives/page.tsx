@@ -72,7 +72,7 @@ export default function InitiativesPage() {
                         className={cn("object-cover transition-transform duration-[1600ms] ease-premium", !wide && "group-hover:scale-105")}
                       />
                     </ImageReveal>
-                    <span aria-hidden className={cn("absolute -bottom-6 grid size-20 place-items-center rounded-full border-[6px] border-ivory bg-navy-900 text-flame-300 shadow-xl", flip ? "left-8" : "right-8")}>
+                    <span aria-hidden className={cn("absolute -bottom-6 grid size-20 place-items-center rounded-full border-[6px] border-ivory bg-navy-900 text-flame-300 shadow-xl", flip ? "left-8" : "right-8", wide && "max-lg:hidden")}>
                       <Icon strokeWidth={1.5} className="size-8" />
                     </span>
                   </div>
