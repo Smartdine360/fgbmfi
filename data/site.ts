@@ -11,8 +11,7 @@ export const site = {
   tagline: "Faith. Fellowship. Leadership. Impact.",
   description:
     "FGBMFI Singapore connects Christian business leaders, professionals and believers to grow in faith, build meaningful relationships and make a lasting impact in the marketplace and community.",
-  // TODO: set NEXT_PUBLIC_SITE_URL to the real domain before going live.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.org",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.fgbsg.com",
   internationalUrl: "https://www.fgbmfi.org",
   // The facts below are taken from the international site, www.fgbmfi.org (October 2026).
   international: {
