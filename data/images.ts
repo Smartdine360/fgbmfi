@@ -17,7 +17,7 @@ export const siteImages = {
   og: { src: "/images/og.jpg", alt: "FGBMFI Singapore" } as SiteImage,
   hero: img("hero", "Members gathered at round tables during a fellowship session"),
   heroLeaders: img("hero-leaders", "Two members leading a session from the podium"),
-  heroPortrait: { src: "/images/mathew.webp", alt: "Portrait of Mathew" } as SiteImage,
+  heroPortrait: { src: "/images/hero-portrait-president.webp", alt: "Portrait of Mathew" } as SiteImage,
   introPortrait: { src: "/images/mathew2.webp", alt: "Mathew speaking into a microphone at the podium during a fellowship gathering" } as SiteImage,
   speakerLectern: { src: "/images/speaker-lectern.webp", alt: "A member speaking into a microphone at the lectern during a fellowship gathering" } as SiteImage,
   networkingCall: { src: "/images/networking-call.webp", alt: "Members from several nations meeting together on a video call" } as SiteImage,
