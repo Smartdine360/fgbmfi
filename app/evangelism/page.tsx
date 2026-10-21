@@ -61,7 +61,7 @@ const challenges = [
 ];
 
 // One photograph per challenge, in the same order as `challenges`.
-const challengePhotos = [siteImages.introFellowship, siteImages.networkingCall, siteImages.historyArchive, siteImages.globalLeadership, siteImages.purposePrayer];
+const challengePhotos = [siteImages.evangelismYouth, siteImages.evangelismOutreach, siteImages.evangelismLeaders, siteImages.evangelismNations, siteImages.evangelismIdentity];
 
 // Shared looks for the section labels and headings on this page.
 const pill = "eyebrow inline-flex items-center gap-2.5 rounded-full border border-line bg-white/70 px-4 py-2 text-flame-700";
@@ -72,7 +72,7 @@ const dot = <span aria-hidden className="bg-sunset size-1.5 rounded-full" />;
 export default function EvangelismPage() {
   return (
     <>
-      <PageHero medium serif title="Marketplace Evangelism." image={siteImages.visionHero} crumbs={[{ label: "Evangelism" }]} />
+      <PageHero medium serif title="Marketplace Evangelism." image={siteImages.evangelismHero} crumbs={[{ label: "Evangelism" }]} />
 
       {/* The call to action, set large */}
       <section className="relative isolate overflow-hidden bg-gradient-to-br from-sand via-ivory to-flame-200/50 py-16 md:py-24">
@@ -116,7 +116,7 @@ export default function EvangelismPage() {
             {/* Tilted accent panel behind the photograph */}
             <div aria-hidden className="bg-sunset absolute inset-0 rotate-2 rounded-[2.25rem] opacity-90" />
             <ImageReveal className="aspect-[4/5] rounded-[2rem] bg-navy-900 shadow-[0_40px_80px_-40px_rgba(20,11,51,0.7)]">
-              <Image src={siteImages.introPortrait.src} alt={siteImages.introPortrait.alt} fill sizes="(min-width: 1024px) 38vw, 92vw" className="object-cover object-[70%_center]" />
+              <Image src={siteImages.evangelismSpeaker.src} alt={siteImages.evangelismSpeaker.alt} fill sizes="(min-width: 1024px) 38vw, 92vw" className="object-cover" />
             </ImageReveal>
           </div>
         </div>
