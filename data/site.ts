@@ -35,7 +35,7 @@ export const site = {
  * contact page and the "Get directions" link search for.
  */
 export const contact: { email: string | null; phone: string | null; address: string[] | null; mapQuery: string } = {
-  email: "matthiasfgbmfisg@gmail.com",
+  email: "matthiasfgbsg@gmail.com",
   phone: "+65 8172 0011",
   address: ["140 Paya Lebar Road, #03-08", "AZ @ Paya Lebar", "Singapore 409015"],
   mapQuery: "AZ @ Paya Lebar, 140 Paya Lebar Road, Singapore 409015",

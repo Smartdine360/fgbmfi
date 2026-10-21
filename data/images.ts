@@ -34,6 +34,7 @@ export const siteImages = {
   cta: img("cta", "Members standing in worship across the room"),
   aboutHero: img("about-hero", "Members of the fellowship gathered for a group photograph"),
   aboutStory: img("about-story", "Members in conversation around a table"),
+  aboutGroup: img("about-group", "FGBMFI Singapore members and guests gathered together for a group photo after a fellowship evening"),
   aboutGlobal: img("about-global", "Members listening during a session"),
   visionHero: img("vision-hero", "A leader leading the room in worship"),
   missionLeaders: img("mission-leaders", "Leaders praying with a fellow member"),

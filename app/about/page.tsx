@@ -33,7 +33,7 @@ export default function AboutPage() {
     <>
       <Hero scrollHref="#mission" />
 
-      {/* Mission statement: the Psalm beside a photograph, then the six points as a compact grid */}
+      {/* Mission statement: the heading beside the group photograph, then the six points as a compact grid */}
       <section id="mission" className="section-y relative isolate scroll-mt-16 overflow-hidden bg-gradient-to-br from-sand via-ivory to-flame-200/50">
         <div aria-hidden className="absolute -left-40 -top-40 -z-10 size-[32rem] rounded-full bg-navy-600/15 blur-3xl" />
         <div className="container-page">
@@ -48,16 +48,12 @@ export default function AboutPage() {
                   Six things we are <em className={accent}>here to do.</em>
                 </h2>
               </Reveal>
-              <Reveal delay={0.1} className="mt-8 border-l-2 border-flame-400 pl-5 sm:pl-6">
-                <blockquote className="font-serif text-xl italic leading-snug text-navy-900 sm:text-2xl">“One Generation shall commend their Works to another, they shall tell of their mighty acts.”</blockquote>
-                <p className="eyebrow mt-3 text-flame-700">Psalm 145:4</p>
-              </Reveal>
             </div>
             <Reveal delay={0.15} className="relative lg:col-span-5">
               {/* Tilted accent panel behind the photograph */}
               <div aria-hidden className="bg-sunset absolute inset-0 rotate-2 rounded-[2.25rem] opacity-90" />
-              <div className="relative aspect-[3/2] overflow-hidden rounded-[2rem] bg-navy-900 shadow-[0_40px_80px_-40px_rgba(20,11,51,0.7)]">
-                <Image src={siteImages.aboutStory.src} alt={siteImages.aboutStory.alt} fill sizes="(min-width: 1024px) 38vw, 92vw" className="object-cover" />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] bg-navy-900 shadow-[0_40px_80px_-40px_rgba(20,11,51,0.7)]">
+                <Image src={siteImages.aboutGroup.src} alt={siteImages.aboutGroup.alt} fill sizes="(min-width: 1024px) 38vw, 92vw" className="object-cover" />
               </div>
             </Reveal>
           </div>
