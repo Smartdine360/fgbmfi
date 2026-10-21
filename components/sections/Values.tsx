@@ -8,7 +8,9 @@ import { Reveal } from "@/components/animations/Reveal";
 import { cn } from "@/lib/utils";
 
 // One photograph behind each value, in the same order as `values` in data/site.ts.
-const photos = [siteImages.purposePrayer, siteImages.missionLeaders, siteImages.introFellowship, siteImages.visionHero, siteImages.historyArchive, siteImages.aboutGlobal, siteImages.visionWorship];
+const photos = [siteImages.valueLove, siteImages.valueIntegrity, siteImages.valueRelationship, siteImages.valueCommitment, siteImages.valueNetworking, siteImages.valueTraining, siteImages.valueTransforming];
+// The Training photograph is portrait, so it is cropped from near the top to keep the speaker's face in the panel.
+const photoPosition: Record<number, string> = { 5: "50% 22%" };
 
 const two = (n: number) => String(n).padStart(2, "0");
 
@@ -45,7 +47,7 @@ export function Values() {
               return (
                 <li key={title} className={cn("relative h-52 min-w-0 overflow-hidden rounded-3xl text-white shadow-[0_30px_60px_-35px_rgba(20,11,51,0.6)] transition-[flex-grow] duration-700 ease-premium lg:h-auto lg:basis-0", open ? "lg:grow-[6]" : "lg:grow")}>
                   <button type="button" aria-expanded={open} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)} onClick={() => setActive(i)} className="group absolute inset-0 block w-full text-left">
-                    <Image src={photos[i].src} alt="" fill sizes="(min-width: 1024px) 50vw, 92vw" className={cn("object-cover transition-transform duration-[1400ms] ease-premium", open ? "scale-100" : "scale-110")} />
+                    <Image src={photos[i].src} alt="" fill sizes="(min-width: 1024px) 50vw, 92vw" style={{ objectPosition: photoPosition[i] }} className={cn("object-cover transition-transform duration-[1400ms] ease-premium", open ? "scale-100" : "scale-110")} />
                     <span aria-hidden className={cn("absolute inset-0 transition-colors duration-700", open ? "bg-navy-950/25" : "bg-navy-950/25 lg:bg-navy-950/70")} />
                     <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/55 to-transparent" />
 
